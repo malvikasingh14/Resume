@@ -1,0 +1,3815 @@
+<!DOCTYPE html>
+
+<!-- This code was generated using AnimaApp.com. 
+This code is a high-fidelity prototype.
+Get developer-friendly React or HTML/CSS code for this project at: https://projects.animaapp.com?utm_source=hosted-code 
+23/04/2022 19:48:29 -->
+
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=1352, maximum-scale=1.0"><link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png"><meta name="og:type" content="website"><meta name="twitter:card" content="photo"><script defer src="https://animaapp.s3.amazonaws.com/js/typescript/jquery/3.2.0/jquery.js"></script><script id="anima-hotspots-script" src="hotspots.js"></script><script id="anima-overrides-script" src="overrides.js"></script><script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script><style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:700,500|Inconsolata:400,700,500");
+
+/* The following line is used to measure usage of this code in production. For more info see our usage billing page */
+@import url("https://px.animaapp.com/602814bf4f592dd44f1ed31a.602814c1a9e61dbe9d63701d.3YIVCLI.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay.animate-appear {
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: block;
+  opacity: 0;
+}
+
+.overlay.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --alabaster: #fbfbfb;
+  --black: #000000;
+  --save: #65eeac;
+ 
+  --font-size-l: 27.4px;
+  --font-size-m: 25.1px;
+  --font-size-s: 24px;
+  --font-size-xl: 28px;
+  --font-size-xs: 20px;
+  --font-size-xxl: 36px;
+  --font-size-xxxl: 41.1px;
+ 
+  --font-family-dm_sans: "DM Sans", Helvetica;
+  --font-family-inconsolata: "Inconsolata", Helvetica;
+}
+.inconsolata-normal-alabaster-25-1px {
+  color: var(--alabaster);
+  font-family: var(--font-family-inconsolata);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.dmsans-medium-alabaster-24px {
+  color: var(--alabaster);
+  font-family: var(--font-family-dm_sans);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.inconsolata-medium-alabaster-27-4px {
+  color: var(--alabaster);
+  font-family: var(--font-family-inconsolata);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.inconsolata-normal-alabaster-20px {
+  color: var(--alabaster);
+  font-family: var(--font-family-inconsolata);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inconsolata-bold-alabaster-27-4px {
+  color: var(--alabaster);
+  font-family: var(--font-family-inconsolata);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.inconsolata-bold-caribbean-green-pearl-36px {
+  color: var(--save);
+  font-family: var(--font-family-inconsolata);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.dmsans-bold-alabaster-24px {
+  color: var(--alabaster);
+  font-family: var(--font-family-dm_sans);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.inconsolata-bold-caribbean-green-pearl-28px {
+  color: var(--save);
+  font-family: var(--font-family-inconsolata);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+
+/* screen - website */
+
+.website {
+  background-color: #0d0d0d;
+  height: 100vh;
+  margin: 0px;
+  min-height: 8451px;
+  min-width: 1352px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.website .attention-grabber-DtTISg {
+  align-items: flex-start;
+  background-color: transparent;
+  display: block;
+  flex-direction: column;
+  gap: 59px;
+  justify-content: flex-start;
+  left: calc(50.00% - 581px);
+  opacity: 0;
+  position: absolute;
+  top: 128px;
+  transform: translate(0, 25px);
+}
+
+.website .attention-grabber-DtTISg.animate-enter {
+  animation: animate-enter-frames 0.50s ease-in-out 0.20s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.website .frame-493-OwATds {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  height: 279px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.website .your-contact-information-YJExFU {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 258.54351806640625px;
+  min-width: 762px;
+  position: relative;
+}
+
+.website .your-name-QTQDBp {
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 48px;
+  min-width: 262.1358947753906px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.website .your-name-QTQDBp:hover {
+  background-color: #c57e20
+}
+
+.website .title-jfM73H {
+  background-color: transparent;
+  color: var(--alabaster);
+  font-family: var(--font-family-dm_sans);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .singh-jfM73H {
+  background-color: transparent;
+  color: var(--alabaster);
+  font-family: var(--font-family-dm_sans);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .your-portfolio-QTQDBp {
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 42px;
+  min-width: 762px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.website .your-portfolio-QTQDBp:hover {
+  background-color: #4c64c9
+}
+
+.website .linkedin-httpswwwlin-EDs9wt {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .span0-uxjlZ4 {
+}
+
+.website .span1-uxjlZ4 {
+  text-decoration: underline;
+}
+
+.website .your-portfolio-x9gEXZ {
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 48px;
+  min-width: 415px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.website .your-portfolio-x9gEXZ:hover {
+  background-color: #4c64c9
+}
+
+.website .github-malvikasingh1411gmailcom-1gSxf2 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .span0-ssJoS0 {
+}
+
+.website .span1-ssJoS0 {
+  text-decoration: underline;
+}
+
+.website .your-email-QTQDBp {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 2.283970594406128px;
+  justify-content: flex-start;
+  min-height: 42px;
+  min-width: 332.56793212890625px;
+  position: relative;
+}
+
+.website .malvikasingh1411-2fcT63 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  margin-left: -7.904080848675221e-05px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .x-2fcT63 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .gmailcom-2fcT63 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .your-email-x9gEXZ {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 2.283970594406128px;
+  justify-content: flex-start;
+  margin-bottom: -1.52587890625e-05px;
+  min-height: 42px;
+  min-width: 126px;
+  position: relative;
+}
+
+.website .x9953697341-puEIls {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .image-YJExFU {
+  background-color: transparent;
+  height: 253.70077514648438px;
+  position: relative;
+  width: 253.70068359375px;
+}
+
+.website .an-engineer-in-makin-OwATds {
+  background-color: transparent;
+  color: var(--alabaster);
+  font-family: var(--font-family-inconsolata);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+  height: 172.29945373535156px;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  margin-bottom: -1.52587890625e-05px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 1094.0218505859375px;
+}
+
+.website .frame-494-DtTISg {
+  background-color: transparent;
+  height: 371px;
+  left: calc(50.00% - 548px);
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 690px;
+  width: 1094px;
+}
+
+.website .skills-92cKzg {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 18.271764755249023px;
+  justify-content: flex-start;
+  left: calc(50.00% - 547px);
+  position: absolute;
+  top: 0px;
+  width: 328px;
+}
+
+.website .skills-c9qzpm {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 54.8px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .list-of-skills-c9qzpm {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  margin-bottom: -7.62939453125e-06px;
+  min-height: 297.6794128417969px;
+  min-width: 392.1391296386719px;
+  position: relative;
+}
+
+.website .skills-eRqBxP {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 42px;
+  min-width: 392.1391296386719px;
+  position: relative;
+}
+
+.website .text_label-EqcgRu {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .object-oriented-programming-EqcgRu {
+  background-color: transparent;
+  height: 41.11146926879883px;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 370.00323486328125px;
+}
+
+.website .skills-UXO8c7 {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 42px;
+  min-width: 392.1391296386719px;
+  position: relative;
+}
+
+.website .text_label-ntWp7J {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  margin-left: -8.34397942526266e-05px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .data-structure-and-algorithm-ntWp7J {
+  background-color: transparent;
+  height: 41.11146926879883px;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 370.00323486328125px;
+}
+
+.website .skills-ZTgkM0 {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 42px;
+  min-width: 392.1391296386719px;
+  position: relative;
+}
+
+.website .text_label-LnW9GY {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .git-LnW9GY {
+  background-color: transparent;
+  height: 41.11146926879883px;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 370.00323486328125px;
+}
+
+.website .skills-dmHYOC {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 42px;
+  min-width: 392.1391296386719px;
+  position: relative;
+}
+
+.website .text_label-YOoxa6 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .ms-excel-YOoxa6 {
+  background-color: transparent;
+  height: 41.11146926879883px;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 370.00323486328125px;
+}
+
+.website .skills-ec83X6 {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 42px;
+  min-width: 392.1391296386719px;
+  position: relative;
+}
+
+.website .text_label-671c6K {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .jupyter-notebook-671c6K {
+  background-color: transparent;
+  height: 41.11146926879883px;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 370.00323486328125px;
+}
+
+.website .skills-f4Bjol {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 42px;
+  min-width: 392.1391296386719px;
+  position: relative;
+}
+
+.website .text_label-pIAH3A {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .ux-research-pIAH3A {
+  background-color: transparent;
+  height: 41.11146926879883px;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 370.00323486328125px;
+}
+
+.website .skills-DR52M6 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 18.271764755249023px;
+  justify-content: flex-start;
+  left: calc(50.00% - 164px);
+  position: absolute;
+  top: 0px;
+  width: 328px;
+}
+
+.website .languages-78yvYI {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 54.8px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .list-of-skills-78yvYI {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 246.5435333251953px;
+  min-width: 392.1391296386719px;
+  position: relative;
+}
+
+.website .skills-hB3vNd {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 42px;
+  min-width: 392.1391296386719px;
+  position: relative;
+}
+
+.website .text_label-R3ROLx {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .python-advanced-R3ROLx {
+  background-color: transparent;
+  height: 41.11146926879883px;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 370.00323486328125px;
+}
+
+.website .skills-ZxT3oV {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 42px;
+  min-width: 392.1391296386719px;
+  position: relative;
+}
+
+.website .text_label-CpvKfV {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .c-intermediate-CpvKfV {
+  background-color: transparent;
+  height: 41.11146926879883px;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 370.00323486328125px;
+}
+
+.website .skills-jLVYg1 {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 42px;
+  min-width: 392.1391296386719px;
+  position: relative;
+}
+
+.website .text_label-pqlVpx {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .c-intermediate-pqlVpx {
+  background-color: transparent;
+  height: 41.11146926879883px;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 370.00323486328125px;
+}
+
+.website .skills-a2kM20 {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 42px;
+  min-width: 62.13588333129883px;
+  position: relative;
+}
+
+.website .text_label-Aosuc3 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .java-Aosuc3 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .skills-P2IpPI {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 42px;
+  min-width: 392.1391296386719px;
+  position: relative;
+}
+
+.website .text_label-IFxrc2 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .plsql-IFxrc2 {
+  background-color: transparent;
+  height: 41.11146926879883px;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 370.00323486328125px;
+}
+
+.website .programs-92cKzg {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 18.271764755249023px;
+  justify-content: flex-start;
+  left: calc(50.00% + 219px);
+  position: absolute;
+  top: 0px;
+  width: 328px;
+}
+
+.website .programs-i-know-WhQUFx {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 54.8px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .list-of-programs-WhQUFx {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 246.5435333251953px;
+  min-width: 360.1635437011719px;
+  position: relative;
+}
+
+.website .skills-Mb8JO3 {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 42px;
+  min-width: 360.1635437011719px;
+  position: relative;
+}
+
+.website .text_label-AxVc9S {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .dsa-in-python-AxVc9S {
+  background-color: transparent;
+  height: 41.11146926879883px;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 338.02764892578125px;
+}
+
+.website .skills-I8gupw {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 42px;
+  min-width: 182.13587951660156px;
+  position: relative;
+}
+
+.website .text_label-YP0Rxc {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  margin-left: -7.502450898755342e-05px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .machine-learning-YP0Rxc {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  margin-right: -3.814697265625e-06px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .skills-Bh0Fd7 {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 42px;
+  min-width: 360.1635437011719px;
+  position: relative;
+}
+
+.website .text_label-NYQNyt {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .data-vizualization-NYQNyt {
+  background-color: transparent;
+  height: 41.11146926879883px;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 338.02764892578125px;
+}
+
+.website .skills-im5w2G {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 42px;
+  min-width: 360.1635437011719px;
+  position: relative;
+}
+
+.website .text_label-kkvGyO {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .oracle-sql-kkvGyO {
+  background-color: transparent;
+  height: 41.11146926879883px;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 338.02764892578125px;
+}
+
+.website .skills-SAE0Tk {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 42px;
+  min-width: 360.1635437011719px;
+  position: relative;
+}
+
+.website .text_label-1ciQlR {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .oracle-sql-1ciQlR {
+  background-color: transparent;
+  height: 41.11146926879883px;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 338.02764892578125px;
+}
+
+.website .frame-488-DtTISg {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 54.8152961730957px;
+  justify-content: flex-start;
+  left: calc(50.00% - 548px);
+  position: absolute;
+  top: 1188px;
+}
+
+.website .education-yJbCu2 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 54.8px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .education-wNqNL6 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: block;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 191.13587951660156px;
+  min-width: 1096.305908203125px;
+  opacity: 0;
+  position: relative;
+  transform: translate(0, 25px);
+}
+
+.website .education-wNqNL6.animate-enter1 {
+  animation: animate-enter1-frames 0.35s ease-in 0.00s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter1-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.website .auto-added-frame-ZoOyMo {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start;
+  min-height: 48px;
+  overflow: hidden;
+  position: relative;
+}
+
+.website .vellore-institute-of-rDba8J {
+  background-color: transparent;
+  height: 48px;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .work-specifics-ZoOyMo {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 93.13587951660156px;
+  min-width: 1094.0218505859375px;
+  position: relative;
+}
+
+.website .b-tech-computer-scie-Axawl4 {
+  background-color: transparent;
+  height: 42px;
+  letter-spacing: 0.27px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .duration-Axawl4 {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 18.271764755249023px;
+  justify-content: flex-start;
+  margin-bottom: -3.814697265625e-06px;
+  min-height: 42px;
+  min-width: 126px;
+  position: relative;
+}
+
+.website .x2020-2024-sUOI9d {
+  background-color: transparent;
+  letter-spacing: 0.27px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .brag-about-yourself-ZoOyMo {
+  background-color: transparent;
+  height: 42px;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 1096.305908203125px;
+}
+
+.website .education-9nta2E {
+  align-items: flex-start;
+  background-color: transparent;
+  display: block;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 191.13587951660156px;
+  min-width: 1096.305908203125px;
+  opacity: 0;
+  position: relative;
+  transform: translate(0, 25px);
+}
+
+.website .education-9nta2E.animate-enter2 {
+  animation: animate-enter2-frames 0.50s ease-in-out 0.00s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter2-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.website .indian-institute-of-cBvGpG {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .work-specifics-cBvGpG {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 93.13587951660156px;
+  min-width: 1094.0218505859375px;
+  position: relative;
+}
+
+.website .duration-NSSKzS {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 18.271764755249023px;
+  justify-content: flex-start;
+  min-height: 42px;
+  min-width: 448px;
+  position: relative;
+}
+
+.website .bsc-data-science-and-programming-NzUuxA {
+  background-color: transparent;
+  letter-spacing: 0.27px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .x2021-2024-NSSKzS {
+  background-color: transparent;
+  height: 42px;
+  letter-spacing: 0.27px;
+  line-height: 41.1px;
+  margin-bottom: -3.814697265625e-06px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .brag-about-yourself-cBvGpG {
+  background-color: transparent;
+  height: 42px;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 1096.305908203125px;
+}
+
+.website .education-0yFETw {
+  align-items: flex-start;
+  background-color: transparent;
+  display: block;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 191.13587951660156px;
+  min-width: 1096.305908203125px;
+  opacity: 0;
+  position: relative;
+  transform: translate(0, 25px);
+}
+
+.website .education-0yFETw.animate-enter3 {
+  animation: animate-enter3-frames 0.50s ease-in-out 0.00s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter3-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.website .lotus-valley-interna-Momrjx {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .work-specifics-Momrjx {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 93.13587951660156px;
+  min-width: 1094.0218505859375px;
+  position: relative;
+}
+
+.website .duration-NBzlAx {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 18.271764755249023px;
+  justify-content: flex-start;
+  min-height: 42px;
+  min-width: 350px;
+  position: relative;
+}
+
+.website .high-school-class-12th-Qxd1fR {
+  background-color: transparent;
+  letter-spacing: 0.27px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .x2016-2017-NBzlAx {
+  background-color: transparent;
+  height: 42px;
+  letter-spacing: 0.27px;
+  line-height: 41.1px;
+  margin-bottom: -3.814697265625e-06px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .brag-about-yourself-Momrjx {
+  background-color: transparent;
+  height: 42px;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 1096.305908203125px;
+}
+
+.website .education-FzL7G1 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: block;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+  margin-bottom: -1.52587890625e-05px;
+  min-height: 191.13587951660156px;
+  min-width: 1096.305908203125px;
+  opacity: 0;
+  position: relative;
+  transform: translate(0, 25px);
+}
+
+.website .education-FzL7G1.animate-enter4 {
+  animation: animate-enter4-frames 0.50s ease-in-out 0.00s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter4-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.website .auto-added-frame-UZ7V7D {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start;
+  min-height: 48px;
+  overflow: hidden;
+  position: relative;
+}
+
+.website .lotus-valley-interna-oDiDnx {
+  background-color: transparent;
+  height: 48px;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .work-specifics-UZ7V7D {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 93.13587951660156px;
+  min-width: 1094.0218505859375px;
+  position: relative;
+}
+
+.website .duration-Bf36HE {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 18.271764755249023px;
+  justify-content: flex-start;
+  min-height: 42px;
+  min-width: 322px;
+  position: relative;
+}
+
+.website .senior-secondary-school-Ke3E3q {
+  background-color: transparent;
+  letter-spacing: 0.27px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .x2016-2017-Bf36HE {
+  background-color: transparent;
+  height: 42px;
+  letter-spacing: 0.27px;
+  line-height: 41.1px;
+  margin-bottom: -3.814697265625e-06px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .brag-about-yourself-UZ7V7D {
+  background-color: transparent;
+  height: 42px;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 1096.305908203125px;
+}
+
+.website .work-experience-DtTISg {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 54.8152961730957px;
+  justify-content: flex-start;
+  left: calc(50.00% - 547px);
+  position: absolute;
+  top: 2355px;
+}
+
+.website .work-experience-qBnfz3 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 54.8px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .job-section-qBnfz3 {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 54.8152961730957px;
+  justify-content: flex-start;
+  min-height: 1380.16357421875px;
+  min-width: 1094.0218505859375px;
+  position: relative;
+}
+
+.website .job-x7lFl0 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: block;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 145.13587951660156px;
+  min-width: 1094.0218505859375px;
+  opacity: 0;
+  position: relative;
+  transform: translate(0, 25px);
+}
+
+.website .job-x7lFl0.animate-enter5 {
+  animation: animate-enter5-frames 0.50s ease-in-out 0.00s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter5-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.website .stellar8-JNLpqM {
+  background-color: transparent;
+  height: 48px;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .work-specifics-JNLpqM {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 93.13587951660156px;
+  min-width: 520.7453002929688px;
+  position: relative;
+}
+
+.website .research-intern-ywalQR {
+  background-color: transparent;
+  height: 42px;
+  letter-spacing: 0.27px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 520.7453002929688px;
+}
+
+.website .duration-ywalQR {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 18.271764755249023px;
+  justify-content: flex-start;
+  margin-bottom: -3.814697265625e-06px;
+  min-height: 42px;
+  min-width: 378px;
+  position: relative;
+}
+
+.website .jan-2022-present1-month-dCH9mc {
+  background-color: transparent;
+  color: var(--alabaster);
+  font-family: var(--font-family-inconsolata);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.27px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .job-DCfgwc {
+  align-items: flex-start;
+  background-color: transparent;
+  display: block;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 145.13587951660156px;
+  min-width: 1094.0218505859375px;
+  opacity: 0;
+  position: relative;
+  transform: translate(0, 25px);
+}
+
+.website .job-DCfgwc.animate-enter6 {
+  animation: animate-enter6-frames 0.50s ease-in-out 0.30s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter6-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.website .pixelate-mHU7sS {
+  background-color: transparent;
+  height: 48px;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .work-specifics-mHU7sS {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 93.13587951660156px;
+  min-width: 520.7453002929688px;
+  position: relative;
+}
+
+.website .secretary-1ephHN {
+  background-color: transparent;
+  height: 42px;
+  letter-spacing: 0.27px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 520.7453002929688px;
+}
+
+.website .duration-1ephHN {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 18.271764755249023px;
+  justify-content: flex-start;
+  margin-bottom: -3.814697265625e-06px;
+  min-height: 42px;
+  min-width: 378px;
+  position: relative;
+}
+
+.website .jan-2022-present1-month-yqrDqs {
+  background-color: transparent;
+  letter-spacing: 0.27px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .job-oxHnDN {
+  align-items: flex-start;
+  background-color: transparent;
+  display: block;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 145.13587951660156px;
+  min-width: 1094.0218505859375px;
+  opacity: 0;
+  position: relative;
+  transform: translate(0, 25px);
+}
+
+.website .job-oxHnDN.animate-enter7 {
+  animation: animate-enter7-frames 0.50s ease-in-out 0.00s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter7-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.website .ascendance-puYiv0 {
+  background-color: transparent;
+  height: 48px;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .work-specifics-puYiv0 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 93.13587951660156px;
+  min-width: 520.7453002929688px;
+  position: relative;
+}
+
+.website .research-intern-full-time-UcHbRS {
+  background-color: transparent;
+  height: 42px;
+  letter-spacing: 0.27px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 520.7453002929688px;
+}
+
+.website .duration-UcHbRS {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 18.271764755249023px;
+  justify-content: flex-start;
+  margin-bottom: -3.814697265625e-06px;
+  min-height: 42px;
+  min-width: 378px;
+  position: relative;
+}
+
+.website .jan-2022-present1-month-mwlayI {
+  background-color: transparent;
+  letter-spacing: 0.27px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .job-p1jInt {
+  align-items: flex-start;
+  background-color: transparent;
+  display: block;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 186.13587951660156px;
+  min-width: 1094.0218505859375px;
+  opacity: 0;
+  position: relative;
+  transform: translate(0, 25px);
+}
+
+.website .job-p1jInt.animate-enter8 {
+  animation: animate-enter8-frames 0.50s ease-in-out 0.00s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter8-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.website .student-technical-community-JqFezB {
+  background-color: transparent;
+  height: 48px;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .work-specifics-JqFezB {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 134.13587951660156px;
+  min-width: 520.7453002929688px;
+  position: relative;
+}
+
+.website .core-committee-member-technical-mentor-3WTXkl {
+  background-color: transparent;
+  height: 83px;
+  letter-spacing: 0.27px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 520.7453002929688px;
+}
+
+.website .duration-3WTXkl {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 18.271764755249023px;
+  justify-content: flex-start;
+  min-height: 42px;
+  min-width: 378px;
+  position: relative;
+}
+
+.website .nov-2021-present-4-month-qFUZrx {
+  background-color: transparent;
+  letter-spacing: 0.27px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .job-Gmm9wq {
+  align-items: flex-start;
+  background-color: transparent;
+  display: block;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 145.13587951660156px;
+  min-width: 1094.0218505859375px;
+  opacity: 0;
+  position: relative;
+  transform: translate(0, 25px);
+}
+
+.website .job-Gmm9wq.animate-enter9 {
+  animation: animate-enter9-frames 0.50s ease-in-out 0.00s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter9-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.website .ieee-women-in-engineering-vit-EABxa9 {
+  background-color: transparent;
+  height: 48px;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .work-specifics-EABxa9 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 93.13587951660156px;
+  min-width: 520.7453002929688px;
+  position: relative;
+}
+
+.website .core-committee-member-technical-XjQCAM {
+  background-color: transparent;
+  height: 42px;
+  letter-spacing: 0.27px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 520.7453002929688px;
+}
+
+.website .duration-XjQCAM {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 18.271764755249023px;
+  justify-content: flex-start;
+  margin-bottom: -3.814697265625e-06px;
+  min-height: 42px;
+  min-width: 420px;
+  position: relative;
+}
+
+.website .jan-2021-present-10-months-vfsxAX {
+  background-color: transparent;
+  letter-spacing: 0.27px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .job-IaExmN {
+  align-items: flex-start;
+  background-color: transparent;
+  display: block;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 339.40765380859375px;
+  min-width: 1094.0218505859375px;
+  opacity: 0;
+  position: relative;
+  transform: translate(0, 25px);
+}
+
+.website .job-IaExmN.animate-enter10 {
+  animation: animate-enter10-frames 0.50s ease-in-out 0.00s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter10-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.website .letsgrowmore-auaacl {
+  background-color: transparent;
+  height: 48px;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .work-specifics-auaacl {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 93.13587951660156px;
+  min-width: 520.7453002929688px;
+  position: relative;
+}
+
+.website .campus-ambassador-lead-BoF7Cs {
+  background-color: transparent;
+  height: 42px;
+  letter-spacing: 0.27px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 520.7453002929688px;
+}
+
+.website .duration-BoF7Cs {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 18.271764755249023px;
+  justify-content: flex-start;
+  margin-bottom: -3.814697265625e-06px;
+  min-height: 42px;
+  min-width: 378px;
+  position: relative;
+}
+
+.website .jan-2022-feb-2022-1month-HlMK0Q {
+  background-color: transparent;
+  letter-spacing: 0.27px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .work-specifics-ZwCzjG {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 93.13587951660156px;
+  min-width: 520.7453002929688px;
+  position: relative;
+}
+
+.website .campus-ambassador-gwKzwA {
+  background-color: transparent;
+  height: 42px;
+  letter-spacing: 0.27px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 520.7453002929688px;
+}
+
+.website .duration-gwKzwA {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 18.271764755249023px;
+  justify-content: flex-start;
+  margin-bottom: -3.814697265625e-06px;
+  min-height: 42px;
+  min-width: 378px;
+  position: relative;
+}
+
+.website .nov-2021-dec-2021-1month-7MY8LH {
+  background-color: transparent;
+  letter-spacing: 0.27px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .work-specifics-NchetU {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 93.13587951660156px;
+  min-width: 520.7453002929688px;
+  position: relative;
+}
+
+.website .data-science-internship-lT1gMw {
+  background-color: transparent;
+  height: 42px;
+  letter-spacing: 0.27px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 520.7453002929688px;
+}
+
+.website .duration-lT1gMw {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 18.271764755249023px;
+  justify-content: flex-start;
+  margin-bottom: -3.814697265625e-06px;
+  min-height: 42px;
+  min-width: 364px;
+  position: relative;
+}
+
+.website .oct-2021-dec-20212-month-bJ3an1 {
+  background-color: transparent;
+  letter-spacing: 0.27px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .work-experience-S5XApT {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 54.8152961730957px;
+  justify-content: flex-start;
+  left: calc(50.00% - 548px);
+  position: absolute;
+  top: 3973px;
+}
+
+.website .projects-WITrxF {
+  background-color: transparent;
+  display: block;
+  letter-spacing: 0.00px;
+  line-height: 54.8px;
+  mix-blend-mode: normal;
+  opacity: 0;
+  position: relative;
+  text-align: left;
+  transform: translate(0, 25px);
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .projects-WITrxF.animate-enter11 {
+  animation: animate-enter11-frames 0.50s ease-in 0.00s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter11-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.website .job-section-WITrxF {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 54.8152961730957px;
+  justify-content: flex-start;
+  min-height: 1657.26123046875px;
+  min-width: 1096.305908203125px;
+  position: relative;
+}
+
+.website .job-UPWCE9 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: block;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 304px;
+  min-width: 1096.305908203125px;
+  opacity: 0;
+  position: relative;
+  transform: translate(0, 25px);
+}
+
+.website .job-UPWCE9.animate-enter12 {
+  animation: animate-enter12-frames 0.50s ease-in-out 0.00s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter12-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.website .auto-added-frame-tcxXb7 {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 22.83970832824707px;
+  justify-content: flex-start;
+  min-height: 48px;
+  overflow: hidden;
+  position: relative;
+}
+
+.website .bank-loan-prediction-0ZsVqG {
+  background-color: transparent;
+  height: 48px;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  margin-top: -7.568359433207661e-05px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .work-specifics-tcxXb7 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 42px;
+  min-width: 520.7453002929688px;
+  position: relative;
+}
+
+.website .dec-2021-O8gkGB {
+  background-color: transparent;
+  height: 42px;
+  letter-spacing: 0.27px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 520.7453002929688px;
+}
+
+.website .brag-about-yourself-tcxXb7 {
+  background-color: transparent;
+  height: 206px;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 1096.305908203125px;
+}
+
+.website .span0-5U9x1x {
+}
+
+.website .span1-5U9x1x {
+  text-decoration: underline;
+}
+
+.website .span2-5U9x1x {
+}
+
+.website .span3-5U9x1x {
+  text-decoration: underline;
+}
+
+.website .job-PMxgFR {
+  align-items: flex-start;
+  background-color: transparent;
+  display: block;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 263px;
+  min-width: 1096.305908203125px;
+  opacity: 0;
+  position: relative;
+  transform: translate(0, 25px);
+}
+
+.website .job-PMxgFR.animate-enter13 {
+  animation: animate-enter13-frames 0.50s ease-in-out 0.00s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter13-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.website .auto-added-frame-9hQsU3 {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 22.83970832824707px;
+  justify-content: flex-start;
+  min-height: 48px;
+  overflow: hidden;
+  position: relative;
+}
+
+.website .stock-prediction-KPbg56 {
+  background-color: transparent;
+  height: 48px;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .work-specifics-9hQsU3 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 42px;
+  min-width: 520.7453002929688px;
+  position: relative;
+}
+
+.website .sep-2021-0y7cmy {
+  background-color: transparent;
+  height: 42px;
+  letter-spacing: 0.27px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 520.7453002929688px;
+}
+
+.website .brag-about-yourself-9hQsU3 {
+  background-color: transparent;
+  height: 165px;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 1096.305908203125px;
+}
+
+.website .span0-SqwjxK {
+}
+
+.website .span1-SqwjxK {
+  text-decoration: underline;
+}
+
+.website .job-qNAcc3 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: block;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 222px;
+  min-width: 1096.305908203125px;
+  opacity: 0;
+  position: relative;
+  transform: translate(0, 25px);
+}
+
+.website .job-qNAcc3.animate-enter14 {
+  animation: animate-enter14-frames 0.50s ease-in-out 0.00s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter14-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.website .auto-added-frame-zx1pCN {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 22.83970832824707px;
+  justify-content: flex-start;
+  min-height: 48px;
+  overflow: hidden;
+  position: relative;
+}
+
+.website .chatbot-URyAwZ {
+  background-color: transparent;
+  height: 48px;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .work-specifics-zx1pCN {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 42px;
+  min-width: 520.7453002929688px;
+  position: relative;
+}
+
+.website .apr-2021-R9Ud51 {
+  background-color: transparent;
+  height: 42px;
+  letter-spacing: 0.27px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 520.7453002929688px;
+}
+
+.website .brag-about-yourself-zx1pCN {
+  background-color: transparent;
+  height: 124px;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 1096.305908203125px;
+}
+
+.website .span0-iXGlT1 {
+}
+
+.website .span1-iXGlT1 {
+  text-decoration: underline;
+}
+
+.website .job-OcImVr {
+  align-items: flex-start;
+  background-color: transparent;
+  display: block;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 427px;
+  min-width: 1096.305908203125px;
+  opacity: 0;
+  position: relative;
+  transform: translate(0, 25px);
+}
+
+.website .job-OcImVr.animate-enter15 {
+  animation: animate-enter15-frames 0.50s ease-in-out 0.00s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter15-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.website .auto-added-frame-8mVZ0i {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 22.83970832824707px;
+  justify-content: flex-start;
+  min-height: 48px;
+  overflow: hidden;
+  position: relative;
+}
+
+.website .tasks-for-let-grow-more-internship-OXY1On {
+  background-color: transparent;
+  height: 48px;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .work-specifics-8mVZ0i {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 42px;
+  min-width: 520.7453002929688px;
+  position: relative;
+}
+
+.website .oct-2021-I9kjpu {
+  background-color: transparent;
+  height: 42px;
+  letter-spacing: 0.27px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 520.7453002929688px;
+}
+
+.website .brag-about-yourself-8mVZ0i {
+  background-color: transparent;
+  height: 329px;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 1096.305908203125px;
+}
+
+.website .span0-AxngW7 {
+}
+
+.website .span1-AxngW7 {
+  text-decoration: underline;
+}
+
+.website .span2-AxngW7 {
+}
+
+.website .job-KBCIvt {
+  align-items: flex-start;
+  background-color: transparent;
+  display: block;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 222px;
+  min-width: 1096.305908203125px;
+  opacity: 0;
+  position: relative;
+  transform: translate(0, 25px);
+}
+
+.website .job-KBCIvt.animate-enter16 {
+  animation: animate-enter16-frames 0.50s ease-in-out 0.00s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter16-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.website .auto-added-frame-9jPmaU {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 22.83970832824707px;
+  justify-content: flex-start;
+  min-height: 48px;
+  overflow: hidden;
+  position: relative;
+}
+
+.website .code-a-rangoli-l5Tu1o {
+  background-color: transparent;
+  height: 48px;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .work-specifics-9jPmaU {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 9.135882377624512px;
+  justify-content: flex-start;
+  min-height: 42px;
+  min-width: 520.7453002929688px;
+  position: relative;
+}
+
+.website .nov-2021-4RkAiP {
+  background-color: transparent;
+  height: 42px;
+  letter-spacing: 0.27px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 520.7453002929688px;
+}
+
+.website .brag-about-yourself-9jPmaU {
+  background-color: transparent;
+  height: 124px;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 1096.305908203125px;
+}
+
+.website .span0-yNfKgO {
+}
+
+.website .span1-yNfKgO {
+  text-decoration: underline;
+}
+
+.website .work-experience-jQwkgh {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 54.8152961730957px;
+  justify-content: flex-start;
+  left: calc(50.00% - 548px);
+  position: absolute;
+  top: 5868px;
+}
+
+.website .courses-and-certifications-XIr8EF {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 54.8px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.website .job-section-XIr8EF {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 54.8152961730957px;
+  justify-content: flex-start;
+  min-height: 1142.7802734375px;
+  min-width: 1096.305908203125px;
+  position: relative;
+}
+
+.website .job-CNwcoQ {
+  align-items: flex-start;
+  background-color: transparent;
+  display: block;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 176px;
+  min-width: 1096.305908203125px;
+  opacity: 0;
+  position: relative;
+  transform: translate(0, 25px);
+}
+
+.website .job-CNwcoQ.animate-enter17 {
+  animation: animate-enter17-frames 0.50s ease-in-out 0.00s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter17-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.website .auto-added-frame-sFqnEp {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 22.83970832824707px;
+  justify-content: flex-start;
+  min-height: 48px;
+  overflow: hidden;
+  position: relative;
+}
+
+.website .deloitte-stem-connec-xsims1 {
+  background-color: transparent;
+  height: 48px;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .brag-about-yourself-sFqnEp {
+  background-color: transparent;
+  height: 124px;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 1096.305908203125px;
+}
+
+.website .span0-pxsxIX {
+}
+
+.website .span1-pxsxIX {
+  text-decoration: underline;
+}
+
+.website .job-jj8PZV {
+  align-items: flex-start;
+  background-color: transparent;
+  display: block;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 217px;
+  min-width: 1096.305908203125px;
+  opacity: 0;
+  position: relative;
+  transform: translate(0, 25px);
+}
+
+.website .job-jj8PZV.animate-enter18 {
+  animation: animate-enter18-frames 0.50s ease-in-out 0.00s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter18-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.website .auto-added-frame-xIAwHZ {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 22.83970832824707px;
+  justify-content: flex-start;
+  min-height: 48px;
+  overflow: hidden;
+  position: relative;
+}
+
+.website .lets-grow-more-data-science-intern-qlEdeJ {
+  background-color: transparent;
+  height: 48px;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .brag-about-yourself-xIAwHZ {
+  background-color: transparent;
+  height: 165px;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 1096.305908203125px;
+}
+
+.website .span0-ZNxQiN {
+}
+
+.website .span1-ZNxQiN {
+  text-decoration: underline;
+}
+
+.website .span2-ZNxQiN {
+}
+
+.website .span3-ZNxQiN {
+  text-decoration: underline;
+}
+
+.website .job-WHwZjD {
+  align-items: flex-start;
+  background-color: transparent;
+  display: block;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 135px;
+  min-width: 1096.305908203125px;
+  opacity: 0;
+  position: relative;
+  transform: translate(0, 25px);
+}
+
+.website .job-WHwZjD.animate-enter19 {
+  animation: animate-enter19-frames 0.50s ease-in-out 0.00s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter19-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.website .auto-added-frame-6h4ZqE {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 22.83970832824707px;
+  justify-content: flex-start;
+  min-height: 48px;
+  overflow: hidden;
+  position: relative;
+}
+
+.website .lets-grow-more-campus-ambassador-lead-otAXxb {
+  background-color: transparent;
+  height: 48px;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .brag-about-yourself-6h4ZqE {
+  background-color: transparent;
+  height: 83px;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 1096.305908203125px;
+}
+
+.website .span0-tAeK1r {
+}
+
+.website .span1-tAeK1r {
+  text-decoration: underline;
+}
+
+.website .job-BdAJNL {
+  align-items: flex-start;
+  background-color: transparent;
+  display: block;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 135px;
+  min-width: 1096.305908203125px;
+  opacity: 0;
+  position: relative;
+  transform: translate(0, 25px);
+}
+
+.website .job-BdAJNL.animate-enter20 {
+  animation: animate-enter20-frames 0.50s ease-in-out 0.00s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter20-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.website .auto-added-frame-cNnF2V {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 22.83970832824707px;
+  justify-content: flex-start;
+  min-height: 48px;
+  overflow: hidden;
+  position: relative;
+}
+
+.website .lets-grow-more-campus-ambassador-U77zRP {
+  background-color: transparent;
+  height: 48px;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  margin-bottom: -7.026258390396833e-05px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .brag-about-yourself-cNnF2V {
+  background-color: transparent;
+  height: 83px;
+  letter-spacing: 0.00px;
+  line-height: 41.1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 1096.305908203125px;
+}
+
+.website .span0-wngRJV {
+}
+
+.website .span1-wngRJV {
+  text-decoration: underline;
+}
+
+.website .job-uX21jw {
+  align-items: flex-start;
+  background-color: transparent;
+  display: block;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+  margin-bottom: -3.0517578125e-05px;
+  min-height: 260.5191345214844px;
+  min-width: 1094.0218505859375px;
+  opacity: 0;
+  position: relative;
+  transform: translate(0, 25px);
+}
+
+.website .job-uX21jw.animate-enter21 {
+  animation: animate-enter21-frames 0.50s ease-in-out 0.00s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter21-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.website .auto-added-frame-AB6WxS {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 22.83970832824707px;
+  justify-content: flex-start;
+  min-height: 260.5191345214844px;
+  overflow: hidden;
+  position: relative;
+}
+
+.website .udemy-online-ongoing-pY8wDC {
+  background-color: transparent;
+  height: 48px;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .c-programming-from-beginner-to-beyond-pY8wDC {
+  background-color: transparent;
+  height: 48px;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .python-data-structur-pY8wDC {
+  background-color: transparent;
+  height: 48px;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .ethical-hacking-online-skillarena-pY8wDC {
+  background-color: transparent;
+  height: 48px;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .work-experience-F9IJjc {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 54.8152961730957px;
+  justify-content: flex-start;
+  left: calc(50.00% - 547px);
+  position: absolute;
+  top: 7248px;
+}
+
+.website .co-curricular-activities-sTxfXK {
+  align-self: stretch;
+  background-color: transparent;
+  color: var(--save);
+  font-family: var(--font-family-dm_sans);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 700;
+  height: 55px;
+  letter-spacing: 0.00px;
+  line-height: 54.8px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .job-section-sTxfXK {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: flex-start;
+  min-height: 336px;
+  min-width: 1094.0218505859375px;
+  position: relative;
+}
+
+.website .foreign-languages-german-chinese-pinyin-p6tVPl {
+  background-color: transparent;
+  display: block;
+  height: 48px;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  opacity: 0;
+  position: relative;
+  text-align: left;
+  transform: translate(0, 25px);
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .foreign-languages-german-chinese-pinyin-p6tVPl.animate-enter22 {
+  animation: animate-enter22-frames 0.30s ease-in-out 0.00s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter22-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.website .basketball-on-school-team-for-4yrs-p6tVPl {
+  background-color: transparent;
+  display: block;
+  height: 48px;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  opacity: 0;
+  position: relative;
+  text-align: left;
+  transform: translate(0, 25px);
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .basketball-on-school-team-for-4yrs-p6tVPl.animate-enter23 {
+  animation: animate-enter23-frames 0.30s ease-in-out 0.00s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter23-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.website .interact-club-rotary-club-member-for-1yr-p6tVPl {
+  background-color: transparent;
+  display: block;
+  height: 48px;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  opacity: 0;
+  position: relative;
+  text-align: left;
+  transform: translate(0, 25px);
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .interact-club-rotary-club-member-for-1yr-p6tVPl.animate-enter24 {
+  animation: animate-enter24-frames 0.30s ease-in-out 0.00s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter24-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.website .youth-red-cross-association-p6tVPl {
+  background-color: transparent;
+  display: block;
+  height: 48px;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  opacity: 0;
+  position: relative;
+  text-align: left;
+  transform: translate(0, 25px);
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .youth-red-cross-association-p6tVPl.animate-enter25 {
+  animation: animate-enter25-frames 0.30s ease-in-out 0.00s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter25-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.website .painting-silver-medalist-2012-shilpayan-p6tVPl {
+  background-color: transparent;
+  display: block;
+  height: 48px;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  opacity: 0;
+  position: relative;
+  text-align: left;
+  transform: translate(0, 25px);
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .painting-silver-medalist-2012-shilpayan-p6tVPl.animate-enter26 {
+  animation: animate-enter26-frames 0.30s ease-in-out 0.00s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter26-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.website .work-experience-ukrDiG {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 54.8152961730957px;
+  justify-content: flex-start;
+  left: calc(50.00% - 547px);
+  position: absolute;
+  top: 7822px;
+}
+
+.website .interested-reach-me-out-here-mIgo7x {
+  align-self: stretch;
+  background-color: transparent;
+  height: 55px;
+  letter-spacing: 0.00px;
+  line-height: 54.8px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .job-section-mIgo7x {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: flex-start;
+  min-height: 264px;
+  min-width: 1094.0218505859375px;
+  position: relative;
+}
+
+.website .phone-no-9953697341-xucNhx {
+  background-color: transparent;
+  display: block;
+  height: 48px;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  opacity: 0;
+  position: relative;
+  text-align: left;
+  transform: translate(0, 25px);
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .phone-no-9953697341-xucNhx.animate-enter27 {
+  animation: animate-enter27-frames 0.30s ease-in-out 0.00s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter27-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.website .email-malvikasingh1411gmailcom-xucNhx {
+  background-color: transparent;
+  display: block;
+  height: 48px;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  opacity: 0;
+  position: relative;
+  text-align: left;
+  transform: translate(0, 25px);
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .span0-Z7cTcC {
+}
+
+.website .span1-Z7cTcC {
+  text-decoration: underline;
+}
+
+.website .email-malvikasingh1411gmailcom-xucNhx.animate-enter28 {
+  animation: animate-enter28-frames 0.30s ease-in-out 0.00s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter28-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.website .github-malvikasingh1411gmailcom-xucNhx {
+  background-color: transparent;
+  display: block;
+  height: 48px;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  opacity: 0;
+  position: relative;
+  text-align: left;
+  transform: translate(0, 25px);
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .span0-lS2cDG {
+}
+
+.website .span1-lS2cDG {
+  text-decoration: underline;
+}
+
+.website .github-malvikasingh1411gmailcom-xucNhx.animate-enter29 {
+  animation: animate-enter29-frames 0.30s ease-in-out 0.00s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter29-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.website .linkedin-httpswwwlin-xucNhx {
+  background-color: transparent;
+  display: block;
+  height: 48px;
+  letter-spacing: 0.00px;
+  line-height: 48.0px;
+  mix-blend-mode: normal;
+  opacity: 0;
+  position: relative;
+  text-align: left;
+  transform: translate(0, 25px);
+  white-space: nowrap;
+  width: 1094.0218505859375px;
+}
+
+.website .span0-QwMvIY {
+}
+
+.website .span1-QwMvIY {
+  text-decoration: underline;
+}
+
+.website .linkedin-httpswwwlin-xucNhx.animate-enter30 {
+  animation: animate-enter30-frames 0.30s ease-in-out 0.00s 1 normal forwards;
+  display: block;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter30-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.website .thank-you-note-DtTISg {
+  background-color: transparent;
+  bottom: 65px;
+  color: #ffffff;
+  font-family: var(--font-family-inconsolata);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 700;
+  height: 55px;
+  left: calc(50.00% - 548px);
+  letter-spacing: 0.00px;
+  line-height: 54.8px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 1096px;
+}
+</style></head><body style="margin: 0;background: #0d0d0d;"><input type="hidden" id="anPageName" name="page" value="website"><div class="website screen " data-id="121:783"><div class="attention-grabber-DtTISg animate-enter" data-id="15:306"><div class="frame-493-OwATds" data-id="121:61"><div class="your-contact-information-YJExFU" data-id="15:307"><div class="your-name-QTQDBp smart-layers-pointers" data-id="15:308"><h1 class="title-jfM73H valign-text-middle" data-id="15:310">Malvika</h1><div class="singh-jfM73H valign-text-middle" data-id="15:309">Singh</div></div><div class="your-portfolio-QTQDBp smart-layers-pointers" data-id="15:311"><div class="linkedin-httpswwwlin-EDs9wt valign-text-middle dmsans-bold-alabaster-24px" data-id="15:312"><span><span class="span0-uxjlZ4 dmsans-bold-alabaster-24px">Linkedin: </span><a href="https://www.linkedin.com/in/malvika-singh-b9a1a8204/" target="_blank"><span class="span1-uxjlZ4 dmsans-bold-alabaster-24px">https://www.linkedin.com/in/malvika-singh-b9a1a8204/</span></a></span></div></div><div class="your-portfolio-x9gEXZ smart-layers-pointers" data-id="132:1920"><div class="github-malvikasingh1411gmailcom-1gSxf2 valign-text-middle dmsans-medium-alabaster-24px" data-id="132:1921"><span><span class="span0-ssJoS0 dmsans-medium-alabaster-24px">Github: </span><a href="mailto:malvikasingh1411@gmail.com" target="_blank"><span class="span1-ssJoS0 dmsans-medium-alabaster-24px">malvikasingh1411@gmail.com</span></a></span></div></div><div class="your-email-QTQDBp" data-id="15:314"><div class="malvikasingh1411-2fcT63 valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="15:315">malvikasingh1411</div><div class="x-2fcT63 valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="15:316">@</div><div class="gmailcom-2fcT63 valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="15:317">gmail.com</div></div><div class="your-email-x9gEXZ" data-id="121:104"><div class="x9953697341-puEIls valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="121:105">9953697341</div></div></div><img class="image-YJExFU" data-id="121:100" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/62643c31767b53548b2423db/releases/626457a6767b53548b242434/img/mask-group-9@2x.png"></div><div class="an-engineer-in-makin-OwATds valign-text-middle" data-id="15:319">An engineer in making who aspires to solve critical problems prevailing in today’s world<br>with problem solving skills which she is developing and enhancing by working hard every<br>day.</div></div><div class="frame-494-DtTISg" data-id="126:787"><div class="skills-92cKzg" data-id="15:322"><div class="skills-c9qzpm valign-text-middle inconsolata-bold-caribbean-green-pearl-28px" data-id="15:323">Skills</div><div class="list-of-skills-c9qzpm" data-id="15:324"><div class="skills-eRqBxP" data-id="15:325"><div class="text_label-EqcgRu valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="15:326">→</div><div class="object-oriented-programming-EqcgRu valign-text-middle inconsolata-normal-alabaster-20px" data-id="15:327">Object Oriented Programming</div></div><div class="skills-UXO8c7" data-id="15:328"><div class="text_label-ntWp7J valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="15:329">→</div><div class="data-structure-and-algorithm-ntWp7J valign-text-middle inconsolata-normal-alabaster-20px" data-id="15:330">Data Structure and Algorithm</div></div><div class="skills-ZTgkM0" data-id="15:331"><div class="text_label-LnW9GY valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="15:332">→</div><div class="git-LnW9GY valign-text-middle inconsolata-normal-alabaster-20px" data-id="15:333">GIT</div></div><div class="skills-dmHYOC" data-id="15:334"><div class="text_label-YOoxa6 valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="15:335">→</div><div class="ms-excel-YOoxa6 valign-text-middle inconsolata-normal-alabaster-20px" data-id="15:336">MS EXCEL</div></div><div class="skills-ec83X6" data-id="15:337"><div class="text_label-671c6K valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="15:338">→</div><div class="jupyter-notebook-671c6K valign-text-middle inconsolata-normal-alabaster-20px" data-id="15:339">Jupyter Notebook</div></div><div class="skills-f4Bjol" data-id="121:69"><div class="text_label-pIAH3A valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="121:70">→</div><div class="ux-research-pIAH3A valign-text-middle inconsolata-normal-alabaster-20px" data-id="121:71">UX RESEARCH</div></div></div></div><div class="skills-DR52M6" data-id="121:75"><div class="languages-78yvYI valign-text-middle inconsolata-bold-caribbean-green-pearl-28px" data-id="121:76">Languages</div><div class="list-of-skills-78yvYI" data-id="121:77"><div class="skills-hB3vNd" data-id="121:78"><div class="text_label-R3ROLx valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="121:79">→</div><div class="python-advanced-R3ROLx valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="121:80">Python[Advanced]</div></div><div class="skills-ZxT3oV" data-id="121:81"><div class="text_label-CpvKfV valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="121:82">→</div><div class="c-intermediate-CpvKfV valign-text-middle inconsolata-normal-alabaster-20px" data-id="121:83">C [Intermediate]</div></div><div class="skills-jLVYg1" data-id="121:84"><div class="text_label-pqlVpx valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="121:85">→</div><div class="c-intermediate-pqlVpx valign-text-middle inconsolata-normal-alabaster-20px" data-id="121:86">C++ [Intermediate]</div></div><div class="skills-a2kM20" data-id="121:87"><div class="text_label-Aosuc3 valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="121:88">→</div><div class="java-Aosuc3 valign-text-middle inconsolata-normal-alabaster-20px" data-id="121:89">Java</div></div><div class="skills-P2IpPI" data-id="121:90"><div class="text_label-IFxrc2 valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="121:91">→</div><div class="plsql-IFxrc2 valign-text-middle inconsolata-normal-alabaster-20px" data-id="121:92">PL/SQL</div></div></div></div><div class="programs-92cKzg" data-id="15:340"><div class="programs-i-know-WhQUFx valign-text-middle inconsolata-bold-caribbean-green-pearl-28px" data-id="15:341">Programs I know</div><div class="list-of-programs-WhQUFx" data-id="15:342"><div class="skills-Mb8JO3" data-id="15:343"><div class="text_label-AxVc9S valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="15:344">→</div><div class="dsa-in-python-AxVc9S valign-text-middle inconsolata-normal-alabaster-20px" data-id="15:345">DSA in PYTHON</div></div><div class="skills-I8gupw" data-id="15:346"><div class="text_label-YP0Rxc valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="15:347">→</div><div class="machine-learning-YP0Rxc valign-text-middle inconsolata-normal-alabaster-20px" data-id="15:348">Machine Learning</div></div><div class="skills-Bh0Fd7" data-id="15:349"><div class="text_label-NYQNyt valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="15:350">→</div><div class="data-vizualization-NYQNyt valign-text-middle inconsolata-normal-alabaster-20px" data-id="15:351">Data Vizualization</div></div><div class="skills-im5w2G" data-id="15:352"><div class="text_label-kkvGyO valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="15:353">→</div><div class="oracle-sql-kkvGyO valign-text-middle inconsolata-normal-alabaster-20px" data-id="15:354">Oracle Sql</div></div><div class="skills-SAE0Tk" data-id="125:8"><div class="text_label-1ciQlR valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="125:9">→</div><div class="oracle-sql-1ciQlR valign-text-middle inconsolata-normal-alabaster-20px" data-id="125:10">Oracle Sql</div></div></div></div></div><div class="frame-488-DtTISg" data-id="15:359"><div class="education-yJbCu2 valign-text-middle inconsolata-bold-caribbean-green-pearl-36px" data-id="15:360">Education</div><div class="education-wNqNL6 animate-enter1" data-id="15:361" show-on-scroll><div class="auto-added-frame-ZoOyMo" data-id="121:776"><div class="vellore-institute-of-rDba8J valign-text-middle dmsans-medium-alabaster-24px" data-id="15:362">Vellore Institute of Technology, Vellore, Tamil Nadu&nbsp;&nbsp;[Current]</div></div><div class="work-specifics-ZoOyMo" data-id="15:363"><div class="b-tech-computer-scie-Axawl4 valign-text-middle inconsolata-medium-alabaster-27-4px" data-id="15:364">B.Tech COMPUTER SCIENCE and ENGINERING (ongoing)</div><div class="duration-Axawl4" data-id="15:365"><div class="x2020-2024-sUOI9d valign-text-middle inconsolata-medium-alabaster-27-4px" data-id="15:366">2020-2024</div></div></div><div class="brag-about-yourself-ZoOyMo valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="15:369">CGPA: 8.3</div></div><div class="education-9nta2E animate-enter2" data-id="121:62" show-on-scroll><div class="indian-institute-of-cBvGpG valign-text-middle dmsans-medium-alabaster-24px" data-id="121:63">Indian Institute of Technology Madras [Current]</div><div class="work-specifics-cBvGpG" data-id="121:64"><div class="duration-NSSKzS" data-id="121:66"><div class="bsc-data-science-and-programming-NzUuxA valign-text-middle inconsolata-medium-alabaster-27-4px" data-id="121:67">BSC Data Science and Programming</div></div><div class="x2021-2024-NSSKzS valign-text-middle inconsolata-medium-alabaster-27-4px" data-id="121:65">2021-2024</div></div><div class="brag-about-yourself-cBvGpG valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="121:68">CGPA: 8</div></div><div class="education-0yFETw animate-enter3" data-id="121:49" show-on-scroll><div class="lotus-valley-interna-Momrjx valign-text-middle dmsans-medium-alabaster-24px" data-id="121:50">Lotus Valley International School Noida, Uttar Pradesh</div><div class="work-specifics-Momrjx" data-id="121:51"><div class="duration-NBzlAx" data-id="121:53"><div class="high-school-class-12th-Qxd1fR valign-text-middle inconsolata-medium-alabaster-27-4px" data-id="121:54">High School -&gt; Class 12th</div></div><div class="x2016-2017-NBzlAx valign-text-middle inconsolata-medium-alabaster-27-4px" data-id="121:52">2016-2017</div></div><div class="brag-about-yourself-Momrjx valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="121:55">CGPA: 95.4%</div></div><div class="education-FzL7G1 animate-enter4" data-id="15:370" show-on-scroll><div class="auto-added-frame-UZ7V7D" data-id="121:775"><div class="lotus-valley-interna-oDiDnx valign-text-middle dmsans-medium-alabaster-24px" data-id="15:371">Lotus Valley International School Noida, Uttar Pradesh</div></div><div class="work-specifics-UZ7V7D" data-id="15:372"><div class="duration-Bf36HE" data-id="15:374"><div class="senior-secondary-school-Ke3E3q valign-text-middle inconsolata-medium-alabaster-27-4px" data-id="15:375">Senior Secondary School</div></div><div class="x2016-2017-Bf36HE valign-text-middle inconsolata-medium-alabaster-27-4px" data-id="15:373">2016-2017</div></div><div class="brag-about-yourself-UZ7V7D valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="15:378">CGPA: 10</div></div></div><div class="work-experience-DtTISg" data-id="15:379"><div class="work-experience-qBnfz3 valign-text-middle inconsolata-bold-caribbean-green-pearl-36px" data-id="15:380">Work Experience</div><div class="job-section-qBnfz3" data-id="15:381"><div class="job-x7lFl0 animate-enter5" data-id="121:132" show-on-scroll><div class="stellar8-JNLpqM valign-text-middle dmsans-medium-alabaster-24px" data-id="121:133">Stellar8</div><div class="work-specifics-JNLpqM" data-id="121:134"><div class="research-intern-ywalQR valign-text-middle inconsolata-bold-alabaster-27-4px" data-id="121:135">Research Intern</div><div class="duration-ywalQR" data-id="121:136"><div class="jan-2022-present1-month-dCH9mc valign-text-middle" data-id="121:137">Jan 2022 – Present(1 month)</div></div></div></div><div class="job-DCfgwc animate-enter6" data-id="15:382" show-on-scroll><div class="pixelate-mHU7sS valign-text-middle dmsans-medium-alabaster-24px" data-id="15:383">PIXELATE</div><div class="work-specifics-mHU7sS" data-id="15:384"><div class="secretary-1ephHN valign-text-middle inconsolata-bold-alabaster-27-4px" data-id="15:385">Secretary</div><div class="duration-1ephHN" data-id="15:386"><div class="jan-2022-present1-month-yqrDqs valign-text-middle inconsolata-medium-alabaster-27-4px" data-id="15:387">Jan 2022 – Present(1 month)</div></div></div></div><div class="job-oxHnDN animate-enter7" data-id="121:108" show-on-scroll><div class="ascendance-puYiv0 valign-text-middle dmsans-medium-alabaster-24px" data-id="121:109">ASCENDANCE</div><div class="work-specifics-puYiv0" data-id="121:110"><div class="research-intern-full-time-UcHbRS valign-text-middle inconsolata-bold-alabaster-27-4px" data-id="121:111">Research Intern: Full-time</div><div class="duration-UcHbRS" data-id="121:112"><div class="jan-2022-present1-month-mwlayI valign-text-middle inconsolata-medium-alabaster-27-4px" data-id="121:113">Jan 2022 – Present(1 month)</div></div></div></div><div class="job-p1jInt animate-enter8" data-id="121:114" show-on-scroll><div class="student-technical-community-JqFezB valign-text-middle dmsans-medium-alabaster-24px" data-id="121:115">STUDENT TECHNICAL COMMUNITY</div><div class="work-specifics-JqFezB" data-id="121:116"><div class="core-committee-member-technical-mentor-3WTXkl valign-text-middle inconsolata-bold-alabaster-27-4px" data-id="121:117">Core committee member (Technical mentor)</div><div class="duration-3WTXkl" data-id="121:118"><div class="nov-2021-present-4-month-qFUZrx valign-text-middle inconsolata-medium-alabaster-27-4px" data-id="121:119">Nov 2021- present (4 month)</div></div></div></div><div class="job-Gmm9wq animate-enter9" data-id="121:126" show-on-scroll><div class="ieee-women-in-engineering-vit-EABxa9 valign-text-middle dmsans-medium-alabaster-24px" data-id="121:127">IEEE Women In Engineering VIT</div><div class="work-specifics-EABxa9" data-id="121:128"><div class="core-committee-member-technical-XjQCAM valign-text-middle inconsolata-bold-alabaster-27-4px" data-id="121:129">Core Committee member (Technical)</div><div class="duration-XjQCAM" data-id="121:130"><div class="jan-2021-present-10-months-vfsxAX valign-text-middle inconsolata-medium-alabaster-27-4px" data-id="121:131">Jan 2021 – Present (10 months)</div></div></div></div><div class="job-IaExmN animate-enter10" data-id="121:120" show-on-scroll><div class="letsgrowmore-auaacl valign-text-middle dmsans-medium-alabaster-24px" data-id="121:121">LETSGROWMORE</div><div class="work-specifics-auaacl" data-id="121:122"><div class="campus-ambassador-lead-BoF7Cs valign-text-middle inconsolata-bold-alabaster-27-4px" data-id="121:123">Campus Ambassador Lead</div><div class="duration-BoF7Cs" data-id="121:124"><div class="jan-2022-feb-2022-1month-HlMK0Q valign-text-middle inconsolata-medium-alabaster-27-4px" data-id="121:125">Jan 2022- Feb 2022 (1month)</div></div></div><div class="work-specifics-ZwCzjG" data-id="121:138"><div class="campus-ambassador-gwKzwA valign-text-middle inconsolata-bold-alabaster-27-4px" data-id="121:139">Campus Ambassador</div><div class="duration-gwKzwA" data-id="121:140"><div class="nov-2021-dec-2021-1month-7MY8LH valign-text-middle inconsolata-medium-alabaster-27-4px" data-id="121:141">Nov 2021- Dec 2021 (1month)</div></div></div><div class="work-specifics-NchetU" data-id="121:142"><div class="data-science-internship-lT1gMw valign-text-middle inconsolata-bold-alabaster-27-4px" data-id="121:143">Data Science Internship</div><div class="duration-lT1gMw" data-id="121:144"><div class="oct-2021-dec-20212-month-bJ3an1 valign-text-middle inconsolata-medium-alabaster-27-4px" data-id="121:145">Oct 2021-Dec 2021(2 month)</div></div></div></div></div></div><div class="work-experience-S5XApT" data-id="121:22"><div class="projects-WITrxF valign-text-middle inconsolata-bold-caribbean-green-pearl-36px animate-enter11" data-id="121:23" show-on-scroll>Projects</div><div class="job-section-WITrxF" data-id="121:24"><div class="job-UPWCE9 animate-enter12" data-id="121:177" show-on-scroll><div class="auto-added-frame-tcxXb7" data-id="121:178"><div class="bank-loan-prediction-0ZsVqG valign-text-middle dmsans-medium-alabaster-24px" data-id="121:179">Bank Loan Prediction</div></div><div class="work-specifics-tcxXb7" data-id="121:180"><div class="dec-2021-O8gkGB valign-text-middle inconsolata-medium-alabaster-27-4px" data-id="121:181">Dec 2021</div></div><div class="brag-about-yourself-tcxXb7 valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="121:182"><span><span class="span0-5U9x1x inconsolata-normal-alabaster-25-1px">Streamlit Bank Loan Prediction App, which helps one to see if he or she will pass for a loan based on the<br>credit score and the yearly income.<br>Link to the app: </span><a href="https://share.streamlit.io/malvikasingh14/streamlit-to-github-bank_loan_/malvikasingh14/bank_loan_predictions.py" target="_blank"><span class="span1-5U9x1x inconsolata-normal-alabaster-25-1px">https://share.streamlit.io/malvikasingh14/streamlit-to-github-bank_loan_/malvikasingh14/bank_loan_predictions.py</span></a><span class="span2-5U9x1x inconsolata-normal-alabaster-25-1px"><br>Link to github: </span><a href="https://github.com/malvikasingh14/Bank_loan_prediction_app" target="_blank"><span class="span3-5U9x1x inconsolata-normal-alabaster-25-1px">https://github.com/malvikasingh14/Bank_loan_prediction_app</span></a></span></div></div><div class="job-PMxgFR animate-enter13" data-id="121:153" show-on-scroll><div class="auto-added-frame-9hQsU3" data-id="121:154"><div class="stock-prediction-KPbg56 valign-text-middle dmsans-medium-alabaster-24px" data-id="121:155">Stock Prediction</div></div><div class="work-specifics-9hQsU3" data-id="121:156"><div class="sep-2021-0y7cmy valign-text-middle inconsolata-medium-alabaster-27-4px" data-id="121:157">Sep 2021</div></div><div class="brag-about-yourself-9hQsU3 valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="121:158"><span><span class="span0-SqwjxK inconsolata-normal-alabaster-25-1px">A small project using Streamlit. The pages of the app basically show the pricing of a company according<br>to the company ticker name and predict the price over the specified years. the project was ready in a day.<br>Link: </span><a href="https://github.com/malvikasingh14/Stock_Prediction_Pricing" target="_blank"><span class="span1-SqwjxK inconsolata-normal-alabaster-25-1px">https://github.com/malvikasingh14/Stock_Prediction_Pricing</span></a></span></div></div><div class="job-qNAcc3 animate-enter14" data-id="121:25" show-on-scroll><div class="auto-added-frame-zx1pCN" data-id="121:146"><div class="chatbot-URyAwZ valign-text-middle dmsans-medium-alabaster-24px" data-id="121:26">Chatbot</div></div><div class="work-specifics-zx1pCN" data-id="121:27"><div class="apr-2021-R9Ud51 valign-text-middle inconsolata-medium-alabaster-27-4px" data-id="121:28">Apr 2021</div></div><div class="brag-about-yourself-zx1pCN valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="121:33"><span><span class="span0-iXGlT1 inconsolata-normal-alabaster-25-1px">A Bot is a software tool that mimics a human agent. Basic use of machine learning for a normal FAQ<br>response. So, the bot in this project is for normal chatting purpose.<br>Link: </span><a href="https://github.com/malvikasingh14/Project_Chatbot" target="_blank"><span class="span1-iXGlT1 inconsolata-normal-alabaster-25-1px">https://github.com/malvikasingh14/Project_Chatbot</span></a></span></div></div><div class="job-OcImVr animate-enter15" data-id="121:159" show-on-scroll><div class="auto-added-frame-8mVZ0i" data-id="121:160"><div class="tasks-for-let-grow-more-internship-OXY1On valign-text-middle dmsans-medium-alabaster-24px" data-id="121:161">Tasks for LetGrowMore internship</div></div><div class="work-specifics-8mVZ0i" data-id="121:162"><div class="oct-2021-I9kjpu valign-text-middle inconsolata-medium-alabaster-27-4px" data-id="121:163">Oct 2021</div></div><div class="brag-about-yourself-8mVZ0i valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="121:164"><span><span class="span0-AxngW7 inconsolata-normal-alabaster-25-1px">Iris Flowers Classification ML Project<br>Link: </span><a href="https://github.com/malvikasingh14/-LGMVIP-DataScience/tree/malvikasingh14/Everything-CPP/Iris_Classification_task2" target="_blank"><span class="span1-AxngW7 inconsolata-normal-alabaster-25-1px">https://github.com/malvikasingh14/-LGMVIP-DataScience/tree/malvikasingh14/Everything-CPP/Iris_Classification_task2<br><br></span></a><span class="span2-AxngW7 inconsolata-normal-alabaster-25-1px">Image to Pencil Sketch with Python<br>Link: https://github.com/malvikasingh14/-LGMVIP-DataScience/tree/malvikasingh14/Everything-CPP/Converting_to_pencil_sketch_task<br></span></span></div></div><div class="job-KBCIvt animate-enter16" data-id="121:171" show-on-scroll><div class="auto-added-frame-9jPmaU" data-id="121:172"><div class="code-a-rangoli-l5Tu1o valign-text-middle dmsans-medium-alabaster-24px" data-id="121:173">Code A Rangoli</div></div><div class="work-specifics-9jPmaU" data-id="121:174"><div class="nov-2021-4RkAiP valign-text-middle inconsolata-medium-alabaster-27-4px" data-id="121:175">Nov 2021</div></div><div class="brag-about-yourself-9jPmaU valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="121:176"><span><span class="span0-yNfKgO inconsolata-normal-alabaster-25-1px">Rangoli/pattern was made for a competition. It uses turtle in python to develop the pattern.<br>Link: </span><a href="https://github.com/malvikasingh14/Code_A_Rangoli" target="_blank"><span class="span1-yNfKgO inconsolata-normal-alabaster-25-1px">https://github.com/malvikasingh14/Code_A_Rangoli</span></a></span></div></div></div></div><div class="work-experience-jQwkgh" data-id="121:183"><div class="courses-and-certifications-XIr8EF valign-text-middle inconsolata-bold-caribbean-green-pearl-36px" data-id="121:184">Courses and Certifications</div><div class="job-section-XIr8EF" data-id="121:185"><div class="job-CNwcoQ animate-enter17" data-id="121:186" show-on-scroll><div class="auto-added-frame-sFqnEp" data-id="121:187"><div class="deloitte-stem-connec-xsims1 valign-text-middle dmsans-medium-alabaster-24px" data-id="121:188">Deloitte. STEM Connect Virtual Experience Program</div></div><div class="brag-about-yourself-sFqnEp valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="121:191"><span><span class="span0-pxsxIX inconsolata-normal-alabaster-25-1px">Certificate Link: </span><a href="https://insidesherpa.s3.amazonaws.com/completion-
+certificates/Deloitte YPWCiGNTkr6QxcpEu_Deloitte_RqjYopQ9hrNQWabXx_1635712432428_completion_certificate.pdf" target="_blank"><span class="span1-pxsxIX inconsolata-normal-alabaster-25-1px">https://insidesherpa.s3.amazonaws.com/completion-<br>certificates/Deloitte YPWCiGNTkr6QxcpEu_Deloitte_RqjYopQ9hrNQWabXx_1635712432428_completion_certificate.pdf</span></a></span></div></div><div class="job-jj8PZV animate-enter18" data-id="121:234" show-on-scroll><div class="auto-added-frame-xIAwHZ" data-id="121:235"><div class="lets-grow-more-data-science-intern-qlEdeJ valign-text-middle dmsans-medium-alabaster-24px" data-id="121:236">LetsGrowMore: Data Science Intern</div></div><div class="brag-about-yourself-xIAwHZ valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="121:237"><span><span class="span0-ZNxQiN inconsolata-normal-alabaster-25-1px">Certificate link:<br></span><a href="https://drive.google.com/file/d/1xSzcEvki5dIa63TT8tPfprGDDjATZeVz/view
+" target="_blank"><span class="span1-ZNxQiN inconsolata-normal-alabaster-25-1px">https://drive.google.com/file/d/1xSzcEvki5dIa63TT8tPfprGDDjATZeVz/view<br></span></a><span class="span2-ZNxQiN inconsolata-normal-alabaster-25-1px">Lor link:<br></span><a href="https://drive.google.com/drive/folders/1E4o34mwMLnV9XB0njfzu-69DxrEyYmf5" target="_blank"><span class="span3-ZNxQiN inconsolata-normal-alabaster-25-1px">https://drive.google.com/drive/folders/1E4o34mwMLnV9XB0njfzu-69DxrEyYmf5</span></a></span></div></div><div class="job-WHwZjD animate-enter19" data-id="121:238" show-on-scroll><div class="auto-added-frame-6h4ZqE" data-id="121:239"><div class="lets-grow-more-campus-ambassador-lead-otAXxb valign-text-middle dmsans-medium-alabaster-24px" data-id="121:240">LetsGrowMore: Campus Ambassador Lead</div></div><div class="brag-about-yourself-6h4ZqE valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="121:241"><span><span class="span0-tAeK1r inconsolata-normal-alabaster-25-1px">Lor Links:<br></span><a href="https://drive.google.com/drive/folders/1E4o34mwMLnV9XB0njfzu-69DxrEyYmf5" target="_blank"><span class="span1-tAeK1r inconsolata-normal-alabaster-25-1px">https://drive.google.com/drive/folders/1E4o34mwMLnV9XB0njfzu-69DxrEyYmf5</span></a></span></div></div><div class="job-BdAJNL animate-enter20" data-id="121:242" show-on-scroll><div class="auto-added-frame-cNnF2V" data-id="121:243"><div class="lets-grow-more-campus-ambassador-U77zRP valign-text-middle dmsans-medium-alabaster-24px" data-id="121:244">LetsGrowMore: Campus Ambassador</div></div><div class="brag-about-yourself-cNnF2V valign-text-middle inconsolata-normal-alabaster-25-1px" data-id="121:245"><span><span class="span0-wngRJV inconsolata-normal-alabaster-25-1px">Certificate:<br></span><a href="https://drive.google.com/drive/folders/1E4o34mwMLnV9XB0njfzu-69DxrEyYmf5" target="_blank"><span class="span1-wngRJV inconsolata-normal-alabaster-25-1px">https://drive.google.com/drive/folders/1E4o34mwMLnV9XB0njfzu-69DxrEyYmf5</span></a></span></div></div><div class="job-uX21jw animate-enter21" data-id="121:250" show-on-scroll><div class="auto-added-frame-AB6WxS" data-id="121:251"><div class="udemy-online-ongoing-pY8wDC valign-text-middle dmsans-medium-alabaster-24px" data-id="121:252">(udemy- Online) (ongoing)</div><div class="c-programming-from-beginner-to-beyond-pY8wDC valign-text-middle dmsans-medium-alabaster-24px" data-id="121:248">C++ Programming From Beginner To Beyond</div><div class="python-data-structur-pY8wDC valign-text-middle dmsans-medium-alabaster-24px" data-id="121:253">Python-data Structure-machine Learning (online-perfect Plan B Elearning)</div><div class="ethical-hacking-online-skillarena-pY8wDC valign-text-middle dmsans-medium-alabaster-24px" data-id="121:254">Ethical Hacking (online-skillarena)</div></div></div></div></div><div class="work-experience-F9IJjc" data-id="121:260"><div class="co-curricular-activities-sTxfXK valign-text-middle" data-id="121:261">Co-Curricular Activities</div><div class="job-section-sTxfXK" data-id="121:262"><div class="foreign-languages-german-chinese-pinyin-p6tVPl valign-text-middle dmsans-medium-alabaster-24px animate-enter22" data-id="121:265" show-on-scroll>Foreign Languages – German, Chinese (pinyin)</div><div class="basketball-on-school-team-for-4yrs-p6tVPl valign-text-middle dmsans-medium-alabaster-24px animate-enter23" data-id="121:269" show-on-scroll>Basketball On School Team For 4yrs</div><div class="interact-club-rotary-club-member-for-1yr-p6tVPl valign-text-middle dmsans-medium-alabaster-24px animate-enter24" data-id="121:273" show-on-scroll>Interact Club (rotary Club) Member For 1yr</div><div class="youth-red-cross-association-p6tVPl valign-text-middle dmsans-medium-alabaster-24px animate-enter25" data-id="121:277" show-on-scroll>Youth Red Cross Association</div><div class="painting-silver-medalist-2012-shilpayan-p6tVPl valign-text-middle dmsans-medium-alabaster-24px animate-enter26" data-id="121:290" show-on-scroll>Painting (silver Medalist 2012 (shilpayan))</div></div></div><div class="work-experience-ukrDiG" data-id="121:294"><div class="interested-reach-me-out-here-mIgo7x valign-text-middle inconsolata-bold-caribbean-green-pearl-36px" data-id="121:295">Interested? Reach me out here:</div><div class="job-section-mIgo7x" data-id="121:296"><div class="phone-no-9953697341-xucNhx valign-text-middle dmsans-medium-alabaster-24px animate-enter27" data-id="121:297" show-on-scroll>Phone No.: 9953697341</div><div class="email-malvikasingh1411gmailcom-xucNhx valign-text-middle dmsans-medium-alabaster-24px animate-enter28" data-id="121:300" show-on-scroll><span><span class="span0-Z7cTcC dmsans-medium-alabaster-24px">Email: </span><a href="mailto:malvikasingh1411@gmail.com" target="_blank"><span class="span1-Z7cTcC dmsans-medium-alabaster-24px">malvikasingh1411@gmail.com</span></a></span></div><div class="github-malvikasingh1411gmailcom-xucNhx valign-text-middle dmsans-medium-alabaster-24px animate-enter29" data-id="132:1919" show-on-scroll><span><span class="span0-lS2cDG dmsans-medium-alabaster-24px">Github: </span><a href="mailto:malvikasingh1411@gmail.com" target="_blank"><span class="span1-lS2cDG dmsans-medium-alabaster-24px">malvikasingh1411@gmail.com</span></a></span></div><div class="linkedin-httpswwwlin-xucNhx valign-text-middle dmsans-medium-alabaster-24px animate-enter30" data-id="121:529" show-on-scroll><span><span class="span0-QwMvIY dmsans-medium-alabaster-24px">Linkedin: </span><a href="https://www.linkedin.com/in/malvika-singh-b9a1a8204/" target="_blank"><span class="span1-QwMvIY dmsans-medium-alabaster-24px">https://www.linkedin.com/in/malvika-singh-b9a1a8204/</span></a></span></div></div></div><div class="thank-you-note-DtTISg valign-text-middle" data-id="15:400">Thank you for reading!&nbsp;&nbsp;:)</div></div><script src="launchpad-js/launchpad-banner.js" async></script><script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script><script>function ShowOnScroll() {
+    this.toShow = [];
+    this.nextEventY = undefined;
+}
+
+ShowOnScroll.prototype.show = function(e) {
+    e.style.display = "";
+};
+
+ShowOnScroll.prototype.hide = function(e) {
+    e.style.display = "none";
+};
+
+ShowOnScroll.prototype.getTop = function(e) {
+    if (e.Top != undefined && e.Top != 0) {
+        return e.Top;
+    }
+    var top = 0;
+    var iter = e;
+    do {
+        top += iter.offsetTop || 0;
+        iter = iter.offsetParent;
+    } while (iter);
+    e.Top = top;
+    return top;
+};
+
+ShowOnScroll.prototype.onScroll = function() {
+    var screenBottom = window.pageYOffset + window.innerHeight;
+    if (this.nextEventY == undefined || this.nextEventY > screenBottom) {
+        return;
+    }
+    this.nextEventY = undefined;
+    for (var i = 0; i < this.toShow.length; i++) {
+        var e = this.toShow[i];
+        var top = this.getTop(e);
+        if (top < screenBottom) {
+            this.show(e);
+            this.toShow.shift();
+            i--;
+        } else {
+            this.nextEventY = top;
+            break;
+        }
+    }
+};
+
+ShowOnScroll.prototype.resetScrolling = function() {
+    // Clear state
+    var screenBottom = window.pageYOffset + window.innerHeight;
+    for (var i = 0; i < this.toShow.length; i++) {
+        var e = this.toShow[i];
+        this.show(e);
+    }
+    this.toShow = [];
+    this.nextEventY == undefined;
+
+    // Collect items
+    var itemsToShowOnScroll = Array.prototype.slice.call(document.getElementsByTagName("*"));
+    itemsToShowOnScroll = itemsToShowOnScroll.filter(function(e) { return e.getAttribute("show-on-scroll") != undefined });
+    var getTop = this.getTop;
+    itemsToShowOnScroll.sort(function(a, b) {
+        return getTop(a) - getTop(b);
+    });
+    for (var i = 0; i < itemsToShowOnScroll.length; i++) {
+        var e = itemsToShowOnScroll[i];
+        var top = this.getTop(e);
+        if (top < screenBottom) {
+            continue;
+        }
+        this.toShow.push(e);
+        this.hide(e);
+        this.nextEventY = this.nextEventY != undefined ? this.nextEventY : top;
+    }
+};
+
+ShowOnScroll.prototype.handleEvent = function(e) {
+    switch (e.type) {
+        case "scroll":
+            this.onScroll();
+            break;
+        case "resize":
+            this.resetScrolling();
+            break;
+    }
+};
+
+ShowOnScroll.prototype.init = function() {
+    this.resetScrolling();
+    window.addEventListener("scroll", this);
+    window.addEventListener("resize", this);
+};
+
+// After anima-src
+setTimeout(function() {
+    var instShowOnScroll = new ShowOnScroll();
+    instShowOnScroll.init();
+}, 250);</script></body></html>
